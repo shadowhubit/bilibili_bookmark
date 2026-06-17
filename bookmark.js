@@ -14,7 +14,7 @@ function getList() {
     return result;
 }
 
-let 最终html = "";
+let finalhtml = "";
 
 (function run() {   
     let startPage = parseInt(prompt("请输入开始页码:", "1"));
@@ -33,11 +33,11 @@ let 最终html = "";
         if (currentPage > endPage) {
             clearInterval(timer); 
             console.log("✅ 自动翻页已完成！");
-            document.write(最终html);
+            document.write(finalhtml);
             return;
         }
         console.log(`⏳ 正在加载第 ${currentPage} 页...`);
-        最终html +=getList();
+        finalhtml +=getList();
         const pageInputs = document.querySelectorAll("#app > main > div.space-favlist > div.favlist-main > div.fav-list-main > div.vui_pagenation.vui_pagenation--jump.card-pagenation > div.vui_pagenation-go > div > div > input");
         const pageInput = pageInputs[0]; 
         if (pageInput) {
