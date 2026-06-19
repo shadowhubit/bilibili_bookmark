@@ -6,7 +6,7 @@ function getList() {
                     node.innerText,
                     '<br><a href="',
                     node.getAttribute('href').match(/[^?]+/)[0],
-                    '" target=_blank >https:',
+                    '" target=_blank >',
                     node.getAttribute('href').match(/[^?]+/)[0],
                     '</a><br>'
                 ].join('');
